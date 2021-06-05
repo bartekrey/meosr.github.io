@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8"/>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script src="./libraries/jquery-3.6.0.js"></script>
+   <title>Common divisors finder</title>
+</head>
+<body>
+   <header>
+   </header>
+   <main>
+     <h1>Common divisors finder </h1>
+     <form>
+       <label for="number1"> Number 1: </label>
+       <input type="text" id="number1" name="number1"></br>
+       <label for="number2"> Number 2: </label>
+       <input type="text" id="number2" name="number2"></br>
+       <input type="button" onclick="calculateDivisors()" value="Calculate">
+     </form>
+        <p id="result"></p>
+   </main>
+   <footer>
+   </footer>
+</body>
+</html>
+
+<script>
+function calculateDivisors (){
+ var number1 = document.getElementById("number1").value;
+ var divisors1 = [];
+ var number2 = document.getElementById("number2").value;
+ var divisors2 = [];
+ var result = [];
+
+ for (let i = 1; i <= number1; i++) {
+   if (number1%i == 0) {
+     divisors1.push(i);
+   }
+ }
+
+ for (let i = 1; i <= number2; i++) {
+   if (number2%i == 0) {
+     divisors2.push(i);
+   }
+ }
+
+ for (i = 0; i <= divisors1.length ; i++) {
+   for (j = 0; j<= divisors2.length; j++) {
+     if (divisors1[i] == divisors2[j]) {
+       result.push(divisors1[i])
+     }
+   }
+ }
+ document.getElementById("result").innerHTML = "Divisors of " +number1 + " = " + divisors1 + "</br>Divisors of "+number2 + " = " + divisors2 + "</br>Common divisors of both numbers = " + result
+}
+</script>
