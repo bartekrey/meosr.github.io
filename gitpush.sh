@@ -2,4 +2,4 @@
 git pull
 git add .
 git commit -m "`date`"
-git push https://meosr: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@github.com/meosr/meosr.github.io.git main
+git push https://meosr:Pyszczek94@github.com/meosr/meosr.github.io.git main
