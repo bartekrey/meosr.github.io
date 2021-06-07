@@ -9,12 +9,9 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-header {
-  height: 6em;
-}
-
 p {
   font-size: 1em;
+  max-width: 41em;
 }
 
 h1 {
