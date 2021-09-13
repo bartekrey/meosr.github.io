@@ -54,5 +54,6 @@ div-border {
 }
 
 .gallery_photo {
+  width:1920px;
   max-height: 40vh;
 }
