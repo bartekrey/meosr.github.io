@@ -13,10 +13,12 @@
 
 <body>
    <header>
-     <span><a href="./index.html"><</a></span> 
+     <span id="go-back"><a href="./index.html"> ◀ </a></span>
    </header>
 
    <main>
+     <div id = "photo_gallery">
+     </div>
    </main>
 
    <footer>
@@ -25,4 +27,23 @@
 </html>
 
 <script>
+function Gallery (name, location, size) {
+  this.name = name;
+  this.location = location;
+  this.render = function () {
+    let gallery_html = "<div class=\"gallery\" id=\""+name+"\"></div>";
+    console.log(gallery_html);
+    $("#photo_gallery").append(gallery_html);
+    for (i=0; i<size; i++) {
+      let index = String(i).padStart(3, "0");
+      let image_source = location + "/" + name + index +".jpg";
+      let image_html ="<img src=\""+image_source+"\"/>"
+      console.log(image_html);
+      $("#"+name).append(image_html);
+    }
+  }
+}
+
+helsinki = new Gallery ("2021_09_13", "./photo_gallery/2021_09_13", 74)
+helsinki.render();
 </script>

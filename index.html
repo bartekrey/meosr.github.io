@@ -16,21 +16,36 @@
    </header>
    <main>
      <h2 id="portfolio-title"><a href="./portfolio.html">Portfolio</a></h2>
+     <h2><a href="./notes.html">Notes</a></h2>
      <h2><a href="./photo-gallery.html">Photos</a></h2>
-     <h2><a href="./photo-gallery.html">Photos</a></h2>
-     <h2 id="tools-title">Tools</h2>
+     <h2 id="tools-title">Tools ▼</h2>
      <div id = "tools">
-       <p><a href="./divisors.html">Common divisors finder</a></p>
+       <p><a href="./divisors.html">VR Writing Generator</a></p>
+       <p><a href="./divisors.html">Common Divisors Finder</a></p>
        <p><a href="./colors.html">Color Pallette Tool</a></p>
+       <p><a href="./colors.html">Geometric Pattern Generators</a></p>
        <p><a href="./writer.html">Document Writer</a></p>
+       <p><a href="./writer.html">Funkiest Unicode Symbols</a></p>
+       <p><a href="./writer.html">ASCII Art Generator</a></p>
+
+
      </div>
 
    </main>
    <footer>
-     <span>by Meos R</span>
+     <span>by Meos R 🮲🮳</span>
    </footer>
 </body>
 </html>
 
 <script>
+
+$(document).ready(function(){
+  $("#tools").hide();
+});
+
+$("#tools-title").click(function(){
+  $("#tools").toggle();
+});
+
 </script>

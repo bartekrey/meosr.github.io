@@ -9,6 +9,9 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
+main {
+  min-width: 41em;
+}
 p {
   font-size: 1em;
   max-width: 41em;
@@ -32,6 +35,19 @@ div-border {
   border-width: 1px;
 }
 
-#go-back{
-  
+#go-back a{
+  position:fixed;
+  font-size: 2em;
+  left: 1em;
+  top: 1em;
+  text-decoration: none;
+  color: black;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
