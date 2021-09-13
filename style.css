@@ -48,6 +48,11 @@ div-border {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  gap: 1em 1em;
+}
+
+.gallery_photo {
+  max-height: 40vh;
 }

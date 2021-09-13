@@ -1,49 +1,43 @@
 <!doctype html>
 <html>
+
 <head>
-   <meta charset="utf-8"/>
-   <link rel="stylesheet" type="text/css" href="style.css">
-   <script
-   			  src="https://code.jquery.com/jquery-3.6.0.min.js"
-   			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-   			  crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-   <title>meos.r</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  <title>meos.r</title>
 </head>
 
 <body>
-   <header>
-     <span id="go-back"><a href="./index.html"> ◀ </a></span>
-   </header>
+  <header>
+    <span id="go-back"><a href="./index.html"> ◀ </a></span>
+  </header>
 
-   <main>
-     <div id = "photo_gallery">
-     </div>
-   </main>
+  <main>
+    <div id="photo_gallery">
+    </div>
+  </main>
 
-   <footer>
-   </footer>
+  <footer>
+  </footer>
 </body>
+
 </html>
 
 <script>
-function Gallery (name, location, size) {
-  this.name = name;
-  this.location = location;
-  this.render = function () {
-    let gallery_html = "<div class=\"gallery\" id=\""+name+"\"></div>";
+  function Gallery(name, location, size) {
+    let gallery_html = "<div class=\"gallery\" id=\"" + name + "\"></div>";
     console.log(gallery_html);
     $("#photo_gallery").append(gallery_html);
-    for (i=0; i<size; i++) {
+    $("#" + name).append("<h1>" + name + "</h1>")
+    for (i = 0; i < size; i++) {
       let index = String(i).padStart(3, "0");
-      let image_source = location + "/" + name + index +".jpg";
-      let image_html ="<img src=\""+image_source+"\"/>"
+      let image_source = location + "/" + name + "_" + index + ".jpg";
+      let image_html = "<img class=\"gallery_photo\" src=\"" + image_source + "\"/>"
       console.log(image_html);
-      $("#"+name).append(image_html);
+      $("#" + name).append(image_html);
     }
   }
-}
-
-helsinki = new Gallery ("2021_09_13", "./photo_gallery/2021_09_13", 74)
-helsinki.render();
+  helsinki = new Gallery("2021_09_13", "./photo_gallery/2021_09_13", 74)
 </script>
