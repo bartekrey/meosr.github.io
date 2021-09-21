@@ -2,7 +2,7 @@
 <html>
 
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8" />
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -16,6 +16,10 @@
   </header>
 
   <main>
+    <div id ="fullscreen_photo_div">
+      <span id="close_div">x</span>
+      <img id ="fullscreen_photo"/>
+    </div>
     <div id="photo_gallery">
     </div>
   </main>
@@ -34,11 +38,19 @@
     $("#" + name).append("<h1>" + name + "</h1>")
     for (i = 0; i < size; i++) {
       let index = String(i).padStart(3, "0");
-      let image_source = location + "/" + name + "_" + index + ".jpg";
-      let image_html = "<img class=\"gallery_photo\" src=\"" + image_source + "\"/>"
+      let image_name = name + "_" + index
+      let image_source = location + "/" + image_name + ".jpg";
+      let image_html = "<img class=\"gallery_photo\" id=\"" + image_name + "\" src=\"" + image_source + "\"/>"
       console.log(image_html);
       $("#" + name).append(image_html);
     }
   }
   helsinki = new Gallery("2021_09_13", "./photo_gallery/2021_09_13", 74)
+
+  $(".gallery_photo").click(function(){
+    let image_name = $(".gallery_photo").html();
+    $("#fullscreen_photo").html("<img id =\"fullscreen_photo\"" + "src=\""/>")
+    $("#fullscreen_photo_div").toggle();
+  });
+
 </script>

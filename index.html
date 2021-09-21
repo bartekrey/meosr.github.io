@@ -1,52 +1,44 @@
 <!doctype html>
 <html>
+
 <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta charset="utf-8"/>
-   <link rel="stylesheet" type="text/css" href="style.css">
-   <script
-          src="https://code.jquery.com/jquery-3.6.0.min.js"
-          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-          crossorigin="anonymous"></script>
-   <title>meos.r</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <title>meos.r</title>
 </head>
+
 <body>
-   <header>
-     <h1>Meos Tools</h1>
-       <p>My public repository with portfolio, small projects, notes on various topics, some tools I programmed and my analog pictures collection 'cause that's just conveniant.</p>
-   </header>
-   <main>
-     <h2 id="portfolio-title"><a href="./portfolio.html">Portfolio</a></h2>
-     <h2><a href="./notes-browser.html">Notes</a></h2>
-     <h2><a href="./photo-gallery.html">Photos</a></h2>
-     <h2 id="tools-title">Tools ▼</h2>
-     <div id = "tools">
-       <p><a href="./vr-writing.html">VR Writing Generator</a></p>
-       <p><a href="./divisors.html">Common Divisors Finder</a></p>
-       <p><a href="./colors.html">Color Palette Tool</a></p>
-       <p><a href="./colors.html">Geometric Pattern Generators</a></p>
-       <p><a href="./writer.html">Document Writer</a></p>
-       <p><a href="./writer.html">Funkiest Unicode Symbols</a></p>
-       <p><a href="./writer.html">ASCII Art Generator</a></p>
+  <header>
+    <h1>Meos Tools</h1>
+    <p>My public repository with portfolio, small projects, notes on various topics, some tools I programmed and my analog pictures collection 'cause that's just conveniant.</p>
+  </header>
+  <main>
+    <h2 id="portfolio-title"><a href="./portfolio.html">Portfolio</a></h2>
+    <h2><a href="./notes-browser.html">Notes</a></h2>
+    <h2><a href="./photo-gallery.html">Photos</a></h2>
+    <h2 id="tools-title"><a>Tools ▼</a></h2>
+    <div id="tools">
+      <h3><a href="./vr-writing.html">VR Writing Generator</a></h3>
+      <h3><a href="./divisors.html">Common Divisors Finder</a></h3>
+      <h3><a href="./colors.html">Color Palette Tool</a></h3>
+      <h3><a href="./colors.html">Geometric Pattern Generators</a></h3>
+      <h3><a href="./writer.html">Document Writer</a></h3>
+      <h3><a href="./writer.html">Funkiest Unicode Symbols</a></h3>
+      <h3><a href="./writer.html">ASCII Art Generator</a></h3>
+    </div>
 
-
-     </div>
-
-   </main>
-   <footer>
-     <span>by Meos R 🮲🮳</span>
-   </footer>
+  </main>
+  <footer>
+    <span>by Meos R 🮲🮳</span>
+  </footer>
 </body>
+
 </html>
 
 <script>
-
-$(document).ready(function(){
-  $("#tools").hide();
-});
-
-$("#tools-title").click(function(){
-  $("#tools").toggle();
-});
-
+  $("#tools-title").click(function() {
+    $("#tools").toggle();
+  });
 </script>

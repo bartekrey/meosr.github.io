@@ -26,6 +26,12 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-left: 2em;
+}
+
 span {
   font-size: 1em;
 }
@@ -60,4 +66,8 @@ a {
 
 .gallery_photo {
   height: 40vh;
+}
+
+#fullscreen_photo_div{
+  display: none;
 }
