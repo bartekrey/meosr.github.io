@@ -1,0 +1,5 @@
+1. Post HTML canvas to server images directory. When button is clicked, HTML Canvas content in <canvas id="p5Canvas"> is saved as another jpg on the server, with correct number.
+2. Get last_image, that was posted onto the server. When opening the app you see the last image that was posted.
+3. Animate all images in the images directory in separate html file. p5js requires to preload images. How to give an array of existing images to p5js script
+
+It feels that I need socket.io?
